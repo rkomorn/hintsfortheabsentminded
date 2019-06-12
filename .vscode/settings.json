@@ -1,0 +1,10 @@
+{
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "editor.formatOnSave": true,
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "80"
+    ],
+    "python.pythonPath": "/home/vagrant/miniconda3/envs/hintsforthelazy/bin/python"
+}

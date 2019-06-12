@@ -1,0 +1,5 @@
+Host vagrant
+    User vagrant
+    IdentityFile /home/rkomorn/vagrant/.vagrant/machines/default/virtualbox/private_key
+    ForwardAgent Yes
+    Port 2222
