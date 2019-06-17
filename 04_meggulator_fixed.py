@@ -51,7 +51,7 @@ class Meggie:
 meggie: Meggie = Meggie(int(argv[1]))
 meggie.compute_puns(
     {
-        "Henry": "Romain's are better percolate than never",
+        "Henry": "Romain's puns are better percolate than never",
         "Romain": "My coffee jokes have never bean better",
         "Ashley": "Romain's coffee puns are esprecious",
     }
@@ -59,4 +59,5 @@ meggie.compute_puns(
 meggie.compute_lecture_updates(LectureUpdate("Romain", 2))
 coffee_needed: float = meggie.meggulate()
 coffee_needed += meggie.compute_day_of_week(datetime.today())
+coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")

@@ -2,6 +2,9 @@ from datetime import datetime
 from sys import argv
 from typing import Dict
 
+# Custom types:
+Puns = Dict[str, str]
+
 
 class ContentUpdate:
 
@@ -29,7 +32,7 @@ class Meggie:
     def __init__(self, time_in: int) -> None:
         self.time_in: int = time_in
 
-    def compute_puns(self, puns: Dict[str, str]) -> None:
+    def compute_puns(self, puns: Puns) -> None:
         pun_factor: int = 1
         pun_cost: int = 0
         for punster, pun in puns.items():
@@ -63,13 +66,12 @@ class Meggie:
 
 
 meggie: Meggie = Meggie(int(argv[1]))
-meggie.compute_puns(
-    {
-        "Henry": "Romain's puns are better percolate than never",
-        "Romain": "My coffee jokes have never bean better",
-        "Ashley": "Romain's coffee puns are esprecious",
-    }
-)
+puns: Puns = {
+    "Henry": "Romain's puns are better percolate than never",
+    "Romain": "My coffee jokes have never bean better",
+    "Ashley": "Romain's coffee puns are esprecious",
+}
+meggie.compute_puns(puns)
 meggie.compute_content_update(LectureUpdate("Romain", 2))
 meggie.compute_content_update(LabUpdate("Ashley", 7))
 coffee_needed: float = meggie.meggulate()

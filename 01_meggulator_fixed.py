@@ -16,4 +16,6 @@ class Meggie:
 
 meggie = Meggie(int(argv[1]))
 coffee_needed = meggie.meggulate()
+coffee_needed = round(coffee_needed, 1)
+coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")

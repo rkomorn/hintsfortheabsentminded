@@ -28,10 +28,12 @@ class Meggie:
 meggie = Meggie(int(argv[1]))
 meggie.compute_puns(
     {
-        "Henry": "Romain's are better percolate than never",
+        "Henry": "Romain's puns are better percolate than never",
         "Romain": "My coffee jokes have never bean better",
         "Ashley": "Romain's coffee puns are esprecious",
     }
 )
 coffee_needed = meggie.meggulate()
+coffee_needed = round(coffee_needed, 1)
+coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")
