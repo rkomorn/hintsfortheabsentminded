@@ -1,9 +1,3 @@
-from typing import List
-
-import numpy
-import scipy
-
-
 class RomainClass:
     pass
 
