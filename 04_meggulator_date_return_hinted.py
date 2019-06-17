@@ -30,6 +30,7 @@ class Meggie:
         lecture_cost: float = 2 / (lecture_update.days_to_lecture + 1)
         if lecture_update.author == "Romain":
             lecture_cost += 1
+        self.lecture_cost = lecture_cost
 
     def compute_day_of_week(self, date: datetime) -> float:
         day = date.weekday()
@@ -43,6 +44,7 @@ class Meggie:
         coffee_needed = self.base_coffee_need
         coffee_needed += max(10 - self.time_in, 0) * 0.25
         coffee_needed += self.pun_cost * 0.01
+        coffee_needed += self.lecture_cost
         return coffee_needed
 
 

@@ -24,6 +24,7 @@ class LabUpdate(ContentUpdate):
 class Meggie:
     name: str = "Meggie"
     base_coffee_need: int = 2
+    total_content_cost: float = 0
 
     def __init__(self, time_in: int) -> None:
         self.time_in: int = time_in
@@ -38,11 +39,12 @@ class Meggie:
 
         self.pun_cost = pun_cost
 
-    def compute_content_updates(self, content_update: ContentUpdate) -> None:
+    def compute_content_update(self, content_update: ContentUpdate) -> None:
         content_cost: float = 2 / (content_update.days_to_event + 1)
         if content_update.author == "Romain":
             content_cost += 1
         content_cost = content_cost * content_update.multiplier
+        self.total_content_cost = content_cost
 
     def compute_day_of_week(self, date: datetime) -> float:
         day: int = date.weekday()
@@ -56,6 +58,7 @@ class Meggie:
         coffee_needed: float = float(self.base_coffee_need)
         coffee_needed += max(10 - self.time_in, 0) * 0.25
         coffee_needed += self.pun_cost * 0.01
+        coffee_needed += self.total_content_cost
         return coffee_needed
 
 
@@ -67,7 +70,8 @@ meggie.compute_puns(
         "Ashley": "Romain's coffee puns are esprecious",
     }
 )
-meggie.compute_content_updates(LectureUpdate("Romain", 2))
+meggie.compute_content_update(LectureUpdate("Romain", 2))
+meggie.compute_content_update(LabUpdate("Ashley", 7))
 coffee_needed: float = meggie.meggulate()
 coffee_needed += meggie.compute_day_of_week(datetime.today())
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")
