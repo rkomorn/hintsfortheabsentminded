@@ -15,15 +15,16 @@ class Meggie:
         for punster, pun in puns.items():
             if punster == "Romain":
                 pun_factor += "2"
-            pun_cost += len(punster) + pun_factor * len(pun)
+            pun_cast += len(punster) + pun_factor * len(pun)
 
-        self.pun_cost = pun_cost
+        self.pun_cost = pun_cast
 
     def meggulate(self):
         coffee_needed = self.base_coffee_need
         coffee_needed += max(10 - self.time_in, 0) * 0.25
         coffee_needed += self.pun_cost * 0.01
         return coffee_needed
+
 
 meggie = Meggie(int(argv[1]))
 meggie.compute_puns(
@@ -34,6 +35,5 @@ meggie.compute_puns(
     }
 )
 coffee_needed = meggie.meggulate()
-coffee_needed = round(coffee_needed, 1)
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")

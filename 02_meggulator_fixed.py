@@ -25,6 +25,7 @@ class Meggie:
         coffee_needed += self.pun_cost * 0.01
         return coffee_needed
 
+
 meggie = Meggie(int(argv[1]))
 meggie.compute_puns(
     {
@@ -34,6 +35,5 @@ meggie.compute_puns(
     }
 )
 coffee_needed = meggie.meggulate()
-coffee_needed = round(coffee_needed, 1)
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")
