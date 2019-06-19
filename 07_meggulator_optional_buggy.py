@@ -70,7 +70,8 @@ meggie: Meggie
 if len(argv) == 3:
     meggie = Meggie(int(argv[1]), int(argv[2]))
 else:
-    meggie = Meggie(int(argv[1]))
+    time_in: int = int(argv[1])
+meggie: Meggie = Meggie(time_in)
 
 puns: Puns = {
     "Henry": "Romain's puns are better percolate than never",

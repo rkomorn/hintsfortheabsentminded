@@ -14,7 +14,8 @@ class Meggie:
         return coffee_needed
 
 
-meggie = Meggie(argv[1])
+time_in = argv[1]
+meggie = Meggie(time_in)
 coffee_needed = meggie.meggulate()
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")
