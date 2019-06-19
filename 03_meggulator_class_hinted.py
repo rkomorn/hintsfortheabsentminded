@@ -40,7 +40,8 @@ class Meggie:
         return coffee_needed
 
 
-meggie: Meggie = Meggie(int(argv[1]))
+time_in: int = int(argv[1])
+meggie: Meggie = Meggie(time_in)
 meggie.compute_puns(
     {
         "Henry": "Romain's puns are better percolate than never",
@@ -48,7 +49,7 @@ meggie.compute_puns(
         "Ashley": "Romain's coffee puns are esprecious",
     }
 )
-meggie.compute_lecture_updates(LectureUpdate("Romain", 2))
+meggie.compute_suggestion_updates(LectureUpdate("Romain", 2))
 coffee_needed = meggie.meggulate()
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")

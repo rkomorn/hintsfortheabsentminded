@@ -1,5 +1,4 @@
 from sys import argv
-from typing import Dict
 
 
 class Meggie:
@@ -9,7 +8,7 @@ class Meggie:
     def __init__(self, time_in: int):
         self.time_in: int = time_in
 
-    def compute_puns(self, puns: Dict[str, str]):
+    def compute_puns(self, puns):
         pun_factor: int = 1
         pun_cost: int = 0
         for punster, pun in puns.items():

@@ -49,7 +49,7 @@ meggie.compute_puns(
         "Ashley": "Romain's coffee puns are esprecious",
     }
 )
-meggie.compute_suggestion_update()
+meggie.compute_suggestion_updates(LectureUpdate("Romain", 2))
 coffee_needed = meggie.meggulate()
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")

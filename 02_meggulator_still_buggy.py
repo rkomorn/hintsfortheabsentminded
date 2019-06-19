@@ -13,10 +13,10 @@ class Meggie:
         pun_cost: int = 0
         for punster, pun in puns.items():
             if punster == "Romain":
-                pun_factor += "2"
+                pun_factor += 2
             pun_cost += len(punster) + pun_factor * len(pun)
 
-        self.pun_cost = pun_cast
+        self.pun_cost = pun_cost
 
     def meggulate(self):
         coffee_needed = self.base_coffee_need
