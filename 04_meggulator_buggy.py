@@ -47,7 +47,7 @@ class Meggie:
         return coffee_needed
 
 
-meggie = Meggie(int(argv[1]))
+meggie: Meggie = Meggie(int(argv[1]))
 meggie.compute_puns(
     {
         "Henry": "Romain's puns are better percolate than never",
