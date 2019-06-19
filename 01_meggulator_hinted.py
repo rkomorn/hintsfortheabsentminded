@@ -10,7 +10,7 @@ class Meggie:
 
     def meggulate(self):
         coffee_needed = self.base_coffee_need
-        coffee_needed = max(10 - self.time_in, 0) * 0.25
+        coffee_needed = max(10 - self.time_in, 0) * 0.75
         return coffee_needed
 
 

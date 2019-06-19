@@ -10,11 +10,11 @@ class Meggie:
 
     def meggulate(self):
         coffee_needed = self.base_coffee_need
-        coffee_needed = max(10 - self.time_in, 0) * 0.25
+        coffee_needed += max(10 - self.time_in, 0) * 0.75
         return coffee_needed
 
 
 meggie = Meggie(argv[1])
-coffee_need = meggie.meggulate()
+coffee_needed = meggie.meggulate()
 coffee_needed = round(coffee_needed, 1)
 print(f"{meggie.name} needs {coffee_needed} cups of coffee.")
