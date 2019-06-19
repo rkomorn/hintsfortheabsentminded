@@ -3,14 +3,14 @@ from sys import argv
 
 class Meggie:
     name: str = "Meggie"
-    base_coffee_need = 2
+    base_coffee_need: int = 2
 
     def __init__(self, time_in: int):
         self.time_in: int = time_in
 
     def meggulate(self):
         coffee_needed = self.base_coffee_need
-        coffee_needed = max(10 - self.time_in, 0) * 0.75
+        coffee_needed += max(10 - self.time_in, 0) * 0.75
         return coffee_needed
 
 

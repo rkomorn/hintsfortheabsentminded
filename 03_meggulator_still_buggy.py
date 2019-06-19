@@ -4,7 +4,7 @@ from typing import Dict
 
 class Meggie:
     name: str = "Meggie"
-    base_coffee_need = 2
+    base_coffee_need: int = 2
 
     def __init__(self, time_in: int):
         self.coffee_needed: int = self.base_coffee_need

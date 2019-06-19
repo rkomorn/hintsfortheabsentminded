@@ -11,7 +11,7 @@ class LectureUpdate:
 
 class Meggie:
     name: str = "Meggie"
-    base_coffee_need = 2
+    base_coffee_need: int = 2
 
     def __init__(self, time_in: int) -> None:
         self.time_in: int = time_in

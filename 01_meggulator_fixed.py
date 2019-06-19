@@ -5,7 +5,7 @@ class Meggie:
     name = "Meggie"
     base_coffee_need = 2
 
-    def __init__(self, time_in: int):
+    def __init__(self, time_in):
         self.time_in = time_in
 
     def meggulate(self):
@@ -14,7 +14,7 @@ class Meggie:
         return coffee_needed
 
 
-time_in: int = int(argv[1])
+time_in = int(argv[1])
 meggie = Meggie(time_in)
 coffee_needed = meggie.meggulate()
 coffee_needed = round(coffee_needed, 1)
