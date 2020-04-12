@@ -6,6 +6,6 @@
         "--line-length",
         "80"
     ],
-    "python.pythonPath": "/home/vagrant/miniconda3/envs/hintsforthelazy/bin/python",
+    "python.pythonPath": "env/bin/python3",
     "python.formatting.provider": "black"
 }
