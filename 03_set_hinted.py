@@ -1,9 +1,12 @@
 from typing import Set
 
 
-def print_item_lengths(items: Set[str]) -> None:
+def get_item_lengths(items: Set[str]) -> str:
+    items_lengths: list = []
     for item in items:
-        print(f"{item}: {len(item)}")
+        items_lengths.append(len(items))
+
+    return items_lengths
 
 
-print_item_lengths(set(["one", "two", 3]))
+print("item lengths: " + get_item_lengths(set(["one", "two", 3])))

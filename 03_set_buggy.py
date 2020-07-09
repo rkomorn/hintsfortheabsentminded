@@ -1,6 +1,9 @@
-def print_item_lengths(items):
+def get_item_lengths(items):
+    items_lengths = []
     for item in items:
-        print(f"{item}: {len(item)}")
+        items_lengths.append(len(items))
+
+    return items_lengths
 
 
-print_item_lengths(set(["one", "two", 3]))
+print("item lengths: " + get_item_lengths(set(["one", "two", 3])))
