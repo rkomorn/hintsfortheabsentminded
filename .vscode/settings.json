@@ -6,6 +6,5 @@
         "--line-length",
         "79"
     ],
-    "python.pythonPath": "env/bin/python3",
     "python.formatting.provider": "black"
 }
