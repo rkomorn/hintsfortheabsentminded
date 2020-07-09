@@ -1,7 +1,7 @@
 def get_item_lengths(items):
     items_lengths = []
     for item in items:
-        items_lengths.append(len(items))
+        items_lengths.append(len(item))
 
     return items_lengths
 

@@ -4,7 +4,7 @@ from typing import Set
 def get_item_lengths(items: Set[str]) -> str:
     items_lengths: list = []
     for item in items:
-        items_lengths.append(len(items))
+        items_lengths.append(len(item))
 
     return items_lengths
 
